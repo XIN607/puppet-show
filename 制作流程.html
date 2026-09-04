@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非遗皮影戏制作工艺</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+            padding: 40px;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .bg-img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.7);
+        }
+
+        .top-bar {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-list li {
+            margin-left: 30px;
+        }
+
+        .nav-list a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease;
+        }
+
+        .nav-list a:hover {
+            color: #f0e68c;
+        }
+
+        .header-caption {
+            font-family: "KaiTi", "楷体", serif;
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+        }
+
+        .slogan {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .container1 {
+            margin: 20px auto;
+            padding: 0 15px;
+            display: flex; /* 两列布局 */
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1; /* 两列平分宽度 */
+        }
+
+        .process-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            min-height: 120px;
+        }
+
+        .left-column .process-card {
+            flex-direction: row;
+        }
+
+        .right-column .process-card {
+            flex-direction: row-reverse;
+        }
+
+        .text-content {
+            padding: 15px;
+            flex: 1;
+        }
+
+        .process-card h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .process-card img {
+            width: 180px;
+            height: 120px;
+        }
+
+        .container2 {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 0 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .pattern-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .patterns-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .patterns-grid img{
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .patterns-grid p{
+            margin: 0;
+            font-size: 14px;
+            color: #333333;
+            font-weight: normal;
+        }
+
+        .pattern-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            align-self: center;
+        }
+
+        .pattern-card h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .info-section {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .section-title {
+            font-family: 'SimHei', sans-serif;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tag-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .tag-item {
+            font-family: 'SimHei', sans-serif;
+            font-size: 14px;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tag-item:hover {
+            color: #b8860b;
+            transform: translateY(-2px);
+        }
+
+        video {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .video-container:hover .video-controls {
+            opacity: 1;
+        }
+
+        .footer {
+            position: relative;
+            width: 100%;
+            color: #fff;
+        }
+
+        .footer img {
+            width: 100%;
+            height: 200px;
+            display: block;
+            filter: brightness(0.6);
+        }
+
+        .footer-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+        }
+
+
+        .nav-menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #fdd835;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            opacity: 0.9;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+<header class="header">
+
+    <div class="header-bg">
+
+        <img src="皮影戏.jpg" alt="非遗油纸伞背景" class="bg-img">
+    </div>
+
+    <div class="top-bar">
+        <h1 class="logo">非遗文化皮影戏宣传网</h1>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="首页.html">首页</a ></li>
+                <li><a href="历史起源.html">历史起源</a ></li>
+                <li><a href="艺术流派.html">艺术流派</a ></li>
+                <li><a href="制作流程.html">制作流程</a ></li>
+                <li><a href="传承发展.html">传承发展</a ></li>
+                <li><a href="登录.html">登录/注册</a ></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-caption">
+        <p class="slogan">一部皮影戏，述说千年人文</p >
+        <h2 class="title">非遗文化<br>皮影戏</h2>
+    </div>
+</header>
+<div class="container1">
+
+    <div class="column left-column">
+        <div class="process-card">
+            <div class="text-content">
+                <h3>裁剪</h3>
+                <p>皮影戏的制作，始于对皮料的精妙裁剪。匠人根据设计图样，将处理好的半透明皮料用利刃分割成不同部件...</p >
+            </div>
+            <img src="images/裁剪.jpg" alt="裁剪">
+        </div>
+
+        <div class="process-card">
+            <div class="text-content">
+                <h3>过稿</h3>
+                <p>打磨平整的皮片，迎来了灵魂的初显——过稿。匠人将精心绘制的图样覆于皮上，用特制的墨笔或钢针...</p >
+            </div>
+            <img src="images/过稿.jpg" alt="过稿">
+        </div>
+
+        <div class="process-card">
+            <div class="text-content">
+                <h3>上色</h3>
+                <p>雕刻完成的影身，如同一张素净的画布，等待着色彩的点染。匠人选用透明度极高的矿物颜料...</p >
+            </div>
+            <img src="images/上色.jpg" alt="上色">
+        </div>
+
+        <div class="process-card">
+            <div class="text-content">
+                <h3>缀结</h3>
+                <p>这是让皮影“活”起来的关键一步。匠人用细如发丝的丝线或皮筋，将雕刻分离的各个部件巧妙地连接起来...</p >
+            </div>
+            <img src="images/缀结.jpg" alt="缀结">
+        </div>
+    </div>
+
+    <div class="column right-column">
+        <div class="process-card">
+            <div class="text-content">
+                <h3>打磨</h3>
+                <p>经验丰富的画师手持细笔，在裱好的伞面上精心绘制图案。无论是传统的花鸟鱼虫、山水风景，还是...</p >
+            </div>
+            <img src="images/打磨.jpg" alt="打磨">
+        </div>
+
+        <div class="process-card">
+            <div class="text-content">
+                <h3>雕刻</h3>
+                <p>裁剪下的皮料边缘尚显粗糙，需经过细致的打磨处理。匠人用细砂纸或特制工具，沿边缘反复摩挲...</p >
+            </div>
+            <img src="images/雕刻.jpg" alt="雕刻">
+        </div>
+
+        <div class="process-card">
+            <div class="text-content">
+                <h3>熨平</h3>
+                <p>上色后的皮影需经过熨平以固色定型。匠人将微热的烙铁或电熨斗，隔着薄布轻柔地滑过影身...</p >
+            </div>
+            <img src="images/熨平.jpg" alt="熨平">
+        </div>
+
+        <div class="process-card">
+            <div class="text-content">
+                <h3>加签</h3>
+                <p>缀结完成的影身，还需安装上“指挥棒”——操纵杆，即加签。通常在影人的颈部和双手处...</p >
+            </div>
+            <img src="images/加签.jpg" alt="加签">
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <div class="pattern-card">
+        <h3>皮影工具</h3>
+        <div class="patterns-grid">
+            <img src="tools/铅笔.jpg" alt="铅笔" class="pattern-icon">
+            <img src="tools/圆规.jpg" alt="圆规" class="pattern-icon">
+            <img src="tools/剪刀.jpg" alt="剪刀" class="pattern-icon">
+            <img src="tools/画笔.jpg" alt="画笔" class="pattern-icon">
+            <img src="tools/刻刀.jpg" alt="刻刀" class="pattern-icon">
+            <img src="tools/凿刀.jpg" alt="凿刀" class="pattern-icon">
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2 class="section-title">成品欣赏</h2>
+        <div class="tag-bar">
+            <span class="tag-item">孙悟空</span>
+            <span class="tag-item">猪八戒</span>
+            <span class="tag-item">沙和尚</span>
+            <span class="tag-item">唐僧</span>
+            <span class="tag-item">年轻女子</span>
+            <span class="tag-item">村姑</span>
+            <span class="tag-item">老婆婆</span>
+            <span class="tag-item">老翁</span>
+            <span class="tag-item">白龙马</span>
+            <span class="tag-item">大山</span>
+            <span class="tag-item">松树</span>
+            <span class="tag-item">房子</span>
+        </div>
+        <video src="孙悟空三大白骨精.mp4" autoplay muted loop width="800"></video>
+    </div>
+</div>
+<footer class="footer">
+
+    <img src="底部背景.jpg" alt="底部背景图">
+
+    <div class="footer-nav">
+        <h3>非遗皮影</h3>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="首页.html">首页</a ></li>
+                <li><a href="历史起源.html">历史起源</a ></li>
+                <li><a href="艺术流派.html">艺术流派</a ></li>
+                <li><a href="制作流程.html">制作流程</a ></li>
+                <li><a href="传承发展.html">传承发展</a ></li>
+                <li><a href="登录.html">登录/注册</a ></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="copyright">
+        版权所有 © 非遗皮影在线网站
+    </div>
+</footer>
+<script>
+    window.addEventListener('load', function() {
+
+        const toolImages = document.querySelectorAll('.patterns-grid img');
+        toolImages.forEach(tool => {
+            tool.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+                this.style.boxShadow = '0 8px 16px rgba(0,0,0,0.2)';
+            });
+
+            tool.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        const video = document.querySelector('video');
+        let isPlaying = true;
+
+        video.addEventListener('mouseenter', function() {
+            if (isPlaying && !this.paused) {
+                this.pause();
+                isPlaying = false;
+            }
+        });
+
+        video.addEventListener('mouseleave', function() {
+            if (!isPlaying && this.paused) {
+                this.play();
+                isPlaying = true;
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

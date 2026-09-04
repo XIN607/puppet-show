@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>历史起源</title>
+        <style>
+            body {
+                background-image: url("背景body.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            /*
+               header
+            */
+            header {
+                width: 1100px;
+                height: 55px;
+                background-color: #fffbef;
+
+                margin: auto;
+            }
+
+            #p1 {
+                font: bold 40px 华文新魏;
+                color: #8b4513;
+
+                margin: 10px;
+                padding: 10px;
+            }
+
+            /*
+                nav
+             */
+            nav {
+                width: 1100px;
+                height: 55px;
+                background-color: #c7a98f;
+                margin: auto;
+
+                display: flex;
+                justify-content: space-around;
+
+                position: sticky;
+                top: 5px;
+                z-index: 999;
+            }
+
+            nav a {
+                margin: auto;
+                font: bold 28px 华文隶书;
+
+                color: black;
+            }
+
+            /*
+                main
+             */
+            main {
+                width: 1100px;
+                margin: 5px auto;
+                background: #ffdfdf;
+
+                background-image: url("背景main.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            /*
+                section1顶部背景图
+             */
+            .s1 {
+                margin: auto;
+                width: 1100px;
+                height: 370px;
+
+            }
+
+            #i1 {
+                width: 1100px;
+                height: 370px;
+            }
+
+
+
+
+            /*
+                section2 朝代演变
+             */
+            .s2 {
+                padding: 15px;
+            }
+
+            .title {
+                text-align: center;
+                font-size: 45px;
+                font-family: 华文新魏;
+                color: #8b4513;
+                text-decoration: underline;
+
+                margin-bottom: 40px;
+            }
+
+            .card {
+                display: flex;
+                background-color: white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                margin-bottom: 25px;
+                transition: all 0.3s ease;
+                border: 1px solid #e8dfce;
+            }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .s2-image {
+                flex: 40%;
+                overflow: hidden;
+            }
+
+            .s2-image img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .s2-content {
+                flex: 60%;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .s2-content1{
+                flex: 50%;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            .s2-header1{
+                border-left: 4px solid #c7a98f;
+            }
+
+            .s2-name1{
+                font-size: 40px;
+                color: #8b4513;
+                font-family: 华文新魏;
+                text-align: center;
+
+            }
+
+            .s2-header {
+                margin-bottom: 20px;
+            }
+
+            .s2-name {
+                font-size: 35px;
+                color: #8b4513;
+                margin-bottom: 5px;
+                font-family: 华文新魏;
+            }
+
+            .s2-content h3 {
+                color: #a0522d;
+                margin-bottom: 15px;
+                font-size: 22px;
+                border-left: 4px solid #c7a98f;
+                padding-left: 10px;
+            }
+
+            .s2-content p {
+                margin-bottom: 15px;
+                text-align: justify;
+                font-size: 16px;
+            }
+
+            .s2-video{
+                text-align: center;
+
+            }
+            .s2-video video{
+                display: block;
+                margin: 0 auto;
+            }
+
+
+            /*
+               footer版权信息
+             */
+            footer {
+                width: 1100px;
+                height: 120px;
+
+                margin: 5px auto;
+                background-color: #c7a98f;
+            }
+
+            #p2 {
+                margin: auto;
+                text-align: center;
+                font: 20px 华文新魏;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <p id="p1">皮影戏</p>
+
+        </header>
+        <nav>
+            <a href="首页.html">首页</a>
+            <a href="历史起源.html">历史起源</a>
+            <a href="艺术流派.html">艺术流派</a>
+            <a href="制作流程.html">制作流程</a>
+            <a href="传承发展.html">传承发展</a>
+            <a href="登录.html">登录/注册</a>
+        </nav>
+        <main>
+            <section class="s1">
+                <img src="header.jpg" id="i1">
+
+            </section>
+
+            <section class="s2">
+                <h2 class="title">皮影戏的历史演变</h2>
+
+                <!--视频-->
+                <div class="card">
+                    <div class="s2-content1">
+                        <div class="s2-header1">
+                            <div class="s2-name1">视频描述</div>
+                        </div>
+                    </div>
+
+                    <div class="s2-video">
+                        <video controls width="600px">
+                            <source src="视频2.mp4">
+                        </video>
+                    </div>
+                </div>
+                <!-- 汉代 -->
+                <div class="card">
+                    <div class="s2-image">
+                        <img src="s2_1.jpg">
+                    </div>
+
+                    <div class="s2-content">
+                        <div class="s2-header">
+                            <div class="s2-name">汉代</div>
+                        </div>
+
+                        <h3>传说的源起</h3>
+                        <p>皮影戏的起源，常被追溯至西汉武帝时期一个充满情感的宫廷故事。史载，宠妃李夫人早逝，武帝思念不已。
+                            方士李少翁心生一计，用棉帛或皮革剪刻成李夫人的形象，在夜晚设置帷帐、点亮灯烛，请武帝遥望。
+                            李夫人的身影在帐上摇曳生姿，仿佛魂魄归来，武帝见状，悲喜交加。这个“弄影还魂”的典故，虽然更近于方术，
+                            却无意间奠定了皮影戏最核心的三个要素：光源、剪影和幕布，因此被后世尊为皮影戏的滥觞</p>
+
+                    </div>
+                </div>
+
+                <!-- 唐宋 -->
+                <div class="card">
+                    <div class="s2-content">
+                        <div class="s2-header">
+                            <div class="s2-name">唐宋</div>
+                        </div>
+                        <h3>从雏形到成熟</h3>
+                        <p>在佛教盛行的唐代，一种名为“变文”的说唱艺术（用以讲述佛经故事）开始流行，它为皮影戏提供了丰富的叙事蓝本。
+                            同时，民间剪纸技艺蓬勃发展，工匠们开始尝试用素纸雕镂人形，进行简单的光影表演，称为“纸影戏”，
+                            这使得皮影从宫廷秘术走向民间娱乐。到了商品经济空前繁荣的宋代，皮影戏迎来了它的第一个黄金时代。
+                            在汴京和临安的勾栏瓦舍中，皮影戏成为最受欢迎的市民娱乐之一。不仅出现了“绘革社”这样的专业行会，
+                            影人的材质也从未经处理的纸升级为更经久耐用的皮革，雕刻工艺日趋精美，表演内容也从神怪传说扩展到丰富的历史故事。</p>
+                    </div>
+
+                    <div class="s2-image">
+                        <img src="s2_2.jpg">
+                    </div>
+                </div>
+
+                <!-- 元明 -->
+                <div class="card">
+                    <div class="s2-image">
+                        <img src="s2_3.jpg">
+                    </div>
+
+                    <div class="s2-content">
+                        <div class="s2-header">
+                            <div class="s2-name">元明</div>
+                        </div>
+                        <h3>传播与深化</h3>
+                        <p>蒙古帝国建立了横跨欧亚的辽阔版图，皮影戏也随着蒙古大军的脚步，
+                            被传播到波斯、阿拉伯、东南亚等遥远地域，对后来如土耳其的“卡拉格兹”影子戏等艺术形式产生了深远影响。
+                            进入明代后，皮影戏的艺术内涵进一步深化。它开始与各地方言、音乐和戏曲声腔紧密结合，
+                            形成了诸如“秦腔皮影”等早期地方风格，为清代流派林立奠定了基础。</p>
+
+                    </div>
+                </div>
+
+                <!-- 清代 -->
+                <div class="card">
+                    <div class="s2-content">
+                        <div class="s2-header">
+                            <div class="s2-name">清代</div>
+                        </div>
+                        <h3>艺术鼎盛与流派形成</h3>
+                        <p>清代是皮影戏艺术的全面鼎盛时期。无论是紫禁城的宫闱深处，还是遍布乡村的社火庙会，都能见到它的身影。
+                            在数百年的传承与演化中，风格鲜明的几大流派最终成型：陕西皮影以其雕刻的精细繁复、造型的夸张大胆著称；
+                            河北滦州皮影（驴皮影）则唱腔独特，影响遍及华北；而四川皮影则以“麻线命”的灵活操纵技巧闻名。
+                            至此，皮影戏集雕刻、染绘、表演、唱白于一体，真正成为一门扎根于民间土壤的综合性艺术瑰宝。</p>
+                    </div>
+                    <div class="s2-image">
+                        <img src="s2_4.jpg">
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p id="p2">版权信息</p>
+        </footer>
+
+
+    </body>
+</html>

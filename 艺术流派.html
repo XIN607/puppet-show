@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>艺术流派</title>
+    <style>
+        body{
+            background-color: #c9c0b4;
+        }
+        .d1{
+            width: 1100px;
+            margin: 20px auto;
+            background: url("背景.jpg");
+        }
+        a {
+            text-decoration: none;
+        }
+        /* 头部导航 */
+        .header {
+            background-color: #fff;
+        }
+        .d6  {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .d6 input {
+            width: 200px;
+            height: 32px;
+            padding: 0 8px;
+            border: 1px solid #ddd;
+        }
+        .d6 button {
+            height: 32px;
+            padding: 0 12px;
+            background-color: #993300;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        /* 导航菜单 */
+        .nav {
+            background-color: #993300;
+            display: flex;
+            width: 1100px;
+            height: 60px;
+            position: sticky;
+            top: 0;
+        }
+        .nav a {
+            display: block;
+            padding: 8px 20px;
+            color: #fff;
+            font-size: 16px;
+            margin: auto;
+        }
+        .nav a.a3, .nav a:hover {
+            background-color: #c03;
+        }
+
+        /* banner区域 */
+        .banner img {
+            width: 1100px;
+            height: 400px;
+            margin: auto;
+            align-content: center;
+        }
+        .s1{
+            margin: 30px 0;
+            width: 1100px;
+        }
+        .d3 {
+            display: flex;
+            gap: 20px;
+        }
+        .d2{
+            text-align:center;
+            border:10px #9e7a5b outset;
+        }
+        h2{
+            font-size: 22px;
+            color: #c03;
+            border-bottom: 2px solid #c03;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        .d2 img{
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        #d4 img{
+            width: 300px;
+            height: 400px;
+            border:10px #9e7a5b outset;
+        }
+        .d5{
+            display: flex;
+            gap: 40px;
+        }
+        .d4 {
+            flex: 1;
+            line-height: 1.8;
+        }
+        /* 页脚 */
+        .footer {
+            background-color: #993300;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+    </style>
+</head>
+<body>
+<!-- 头部导航栏 -->
+<div class="d1">
+            <!-- 导航菜单 -->
+        <nav class="nav">
+            <a href="首页.html" class="a1">首页</a >
+            <a href="历史起源.html">历史起源</a >
+            <a href="艺术流派.html" class="a3">艺术流派</a >
+            <a href="制作流程.html">制作流程</a >
+            <a href="传承发展.html">传承发展</a >
+            <a href="登录.html">登陆/注册</a >
+        </nav>
+
+    <!--  网站顶部区域 -->
+    <section class="banner">
+            <img src="首页.jpg" >
+    </section>
+    <!--  艺术流派简介-->
+    <section>
+        <h2>艺术流派</h2>
+        <div class="d5">
+        <div id="d4">
+            <img src="艺术流派.jpg" alt="艺术流派">
+        </div>
+        <div class="d4">
+            <p>&emsp;&emsp;由于皮影戏在中国的广泛传播，在不同地区的长期演变中形成了不同的流派，常见有四川皮影、湖北皮影、湖南皮影、北京皮影、唐山皮影、山东皮影、山西皮影、青海皮影、宁夏皮影、陕西皮影，以及川北皮影、陇东皮影等风格各具特色的地方皮影。
+                各地皮影的音乐唱腔风格与韵律都吸收了各自地方戏曲、曲艺、民歌小调、音乐体系的精华，从而形成了异彩纷呈的众多流派。
+                有沔阳皮影戏、唐山皮影戏、冀南皮影戏、孝义皮影戏、复州皮影戏、海宁皮影戏、陆丰皮影戏、华县皮影戏、华阴老腔、阿宫腔、弦板腔、环县道情皮影戏、凌源皮影戏等等。<br><br>
+            &emsp;&emsp;河北、北京、东北、山东等地的各路皮影唱腔，虽同源于冀东滦州的乐亭影调，但各自的唱腔分别在京剧、落子、大鼓、梆子和民间歌调的滋润之下，又形成了不同的流派。流畅的平调、华丽的花调、凄哀的悲调不一而足。
+                而其中唐滦地区的掐嗓唱法十分独特。</p>
+        </div>
+        </div>
+    </section>
+    <input type="button" value="换个颜色"
+           onclick="changeWorkStyle('#786436')">
+    <br>
+    <script>
+        function changeWorkStyle(color){
+            let p = document.getElementsByTagName("p")[0];
+            p.style.backgroundColor = color;
+        }
+    </script>
+
+    <!-- 不同流派皮影欣赏  -->
+    <section class="s1">
+        <h2>不同流派皮影欣赏</h2>
+        <div class="d3">
+            <div class="d2">
+                <img src="流派1.jpg" alt="山西皮影">
+                <p>《山西皮影》</p>
+            </div>
+            <div class="d2">
+                <img src="流派2.jpg" alt="湖南皮影">
+                <p>《湖南皮影》</p>
+            </div>
+            <div class="d2">
+                <img src="流派3.jpg" alt="四川皮影">
+                <p>《四川皮影》</p>
+            </div>
+            <div class="d2">
+                <img src="流派4.jpg " alt="北京皮影">
+                <p>《北京皮影》</p>
+            </div>
+            <div class="d2">
+                <img src="流派5.jpg " alt="唐山皮影">
+                <p>《唐山皮影》</p>
+            </div>
+        </div>
+    </section>
+    <!-- 页脚 -->
+    <footer class="footer">
+            <p>版权所有</p >
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>登录</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-image: url("背景body.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            /*
+               header
+            */
+            header {
+                width: 1100px;
+                height: 55px;
+                background-color: #fffbef;
+
+                margin: auto;
+            }
+
+            #p1 {
+                font: bold 40px 华文新魏;
+                color: #8b4513;
+
+                margin: 10px;
+                padding: 10px;
+            }
+
+            /*
+                nav
+             */
+            nav {
+                width: 1100px;
+                height: 55px;
+                background-color: #c7a98f;
+                margin: auto;
+
+                display: flex;
+                justify-content: space-around;
+
+                position: sticky;
+                top: 5px;
+                z-index: 999;
+
+
+            }
+
+            nav a {
+                margin: auto;
+                font: bold 28px 华文隶书;
+
+                color: black;
+            }
+
+            /*
+                main
+             */
+            main {
+                width: 1100px;
+                height: 1100px;
+                margin: 5px auto;
+                background: #ffdfdf;
+
+                background-image: url("背景main.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            /*
+                section1顶部背景图
+             */
+            .s1 {
+                margin: auto;
+                width: 1100px;
+                height: 370px;
+
+            }
+
+            #i1 {
+                width: 1100px;
+                height: 370px;
+            }
+
+            /*s2 第二部分*/
+            .s2 {
+                padding: 15px;
+                margin: 50px auto;
+            }
+
+            /*s2-content 登陆注册部分*/
+            .s2-content {
+                width: 700px;
+                height: 500px;
+                margin: 10px auto;
+                padding: 30px;
+                background: white;
+                border-radius: 20px;
+
+            }
+
+            /*非遗皮影戏*/
+            .title {
+                text-align: center;
+                margin: 20px;
+            }
+
+            .title h1 {
+                font-size: 40px;
+                color: #8b4513;
+                margin-bottom: 5px;
+                font-family: 华文新魏;
+            }
+
+            /*顶部登录注册按钮*/
+            .button {
+                display: flex;
+                margin: 30px auto;
+                border-bottom: 1px solid #8b4513;
+            }
+
+            /*登录*/
+            .button1 {
+                flex:1 ;
+                text-align: center;
+                padding: 10px;
+                background: none;
+                border: none;
+                color: #8b4513;
+                font: 40px 华文隶书;
+            }
+
+            /*
+               整个表单
+            */
+            .form {
+                width: 350px;
+                margin: 20px auto;
+                padding: 8px;
+            }
+            /*
+               表单头
+            */
+            label{
+                font-size: 25px;
+                font-weight: bold;
+                font-family: 微软雅黑;
+                color: #8b4513;
+            }
+
+            /*
+              框
+            */
+            .input{
+                margin-top: 5px;
+            }
+            .form input{
+                width: 100%;
+                height: 35px;
+                border: 1px solid black;
+                border-radius: 5px;
+                font-size: 17px;
+            }
+
+            /*
+               下面登录按钮
+            */
+            .denglubutton{
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 5px;
+                padding: 10px;
+                background: #8b4513;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+            }
+            .denglubutton:hover{
+                background: rgba(139, 69, 19, 0.88);
+            }
+            .link{
+                text-align: center;
+            }
+            .link a{
+                color: #8b4513;
+            }
+
+            /*
+               footer版权信息
+             */
+            footer {
+                width: 1100px;
+                height: 120px;
+
+                margin: 5px auto;
+                background-color: #c7a98f;
+            }
+
+            #p2 {
+                margin: auto;
+                text-align: center;
+                font: 20px 华文新魏;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <p id="p1">皮影戏</p>
+
+        </header>
+        <nav>
+            <a href="首页.html">首页</a>
+            <a href="历史起源.html">历史起源</a>
+            <a href="艺术流派.html">艺术流派</a>
+            <a href="制作流程.html">制作流程</a>
+            <a href="传承发展.html">传承发展</a>
+            <a href="登录.html">登录/注册</a>
+
+        </nav>
+
+        <main>
+            <section class="s1">
+                <img src="header.jpg" id="i1">
+            </section>
+
+            <section class="s2">
+                <div class="s2-content">
+                    <div class="title">
+                        <h1>非遗皮影戏</h1>
+                    </div>
+
+                    <div class="button">
+                        <button class="button1">登录</button>
+                    </div>
+
+                    <form class="form" id="dengluform">
+                        <div class="input">
+                            <label for="username">用户名：</label>
+                            <br>
+                            <input type="text" id="username" placeholder="请输入用户名" required>
+                        </div>
+
+                        <div class="input">
+                            <label for="password">密码：</label>
+                            <br>
+                            <input type="password" id="password" placeholder="请输入密码" required>
+                        </div>
+
+                        <button type="submit" class="denglubutton">登录</button>
+
+                        <div class="link">
+                            <a href="注册.html" id="no">还没有账户？立即注册</a>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+            </section>
+        </main>
+
+        <footer>
+            <p id="p2">版权信息</p>
+        </footer>
+
+
+
+        <!--登录提交alert窗口-->
+        <script>
+            document.getElementById('dengluform').addEventListener('submit',
+                function(e) {
+                e.preventDefault();
+                alert('登录成功！');
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传承发展</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 40px;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .top-bar {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-list li {
+            margin-left: 30px;
+        }
+
+        .nav-list a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease;
+        }
+
+        .nav-list a:hover {
+            color: #f0e68c;
+        }
+
+        .header-caption {
+            font-family: "KaiTi", "楷体", serif;
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+        }
+
+        .slogan {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .styles {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title .en-title {
+            display: block;
+            font-size: 16px;
+            color: #f5a623;
+            margin-top: 8px;
+        }
+
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .shadow-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .shadow-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .shadow-item h3 {
+            font-size: 20px;
+            color: #333;
+            padding: 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .shadow-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            padding: 0 16px 16px;
+        }
+
+        .user-feedback {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title .en-title {
+            display: block;
+            font-size: 16px;
+            color: #f5a623;
+            margin-top: 8px;
+        }
+
+        .feedback-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feedback-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .feedback-content {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-meta {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .user-title {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .footer {
+            position: relative;
+            width: 100%;
+            color: #fff;
+        }
+
+        .footer img {
+            width: 100%;
+            height: 200px;
+            display: block;
+            filter: brightness(0.6);
+        }
+
+        .footer-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+        }
+
+
+        .nav-menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #fdd835;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            opacity: 0.9;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-bg">
+        <img src="皮影戏.jpg" alt="非遗油纸伞背景" class="bg-img">
+    </div>
+
+    <div class="top-bar">
+        <h1 class="logo">非遗文化皮影戏宣传网</h1>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="首页.html">首页</a ></li>
+                <li><a href="历史起源.html">历史起源</a ></li>
+                <li><a href="艺术流派.html">艺术流派</a ></li>
+                <li><a href="制作流程.html">制作流程</a ></li>
+                <li><a href="传承发展.html">传承发展</a ></li>
+                <li><a href="登录.html">登录/注册</a ></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-caption">
+        <p class="slogan">一部皮影戏，述说千年人文</p >
+        <h2 class="title">非遗文化<br>皮影戏</h2>
+    </div>
+</header>
+<section class="styles">
+    <h1 class="section-title">
+        皮影类别
+        <span class="en-title">Shadow Play Styles</span>
+    </h1>
+
+    <div class="shadow-grid">
+        <div class="shadow-item">
+            <img src="photos/秦晋影系.jpg" alt="秦晋影系" class="tech-img">
+            <h3>秦晋影系</h3>
+            <p>主要流行于陕西、山西等地，是中国皮影戏中历史最悠久、影响最大的影系之一。其影人以牛皮雕制，造型精致，风格细腻，以独特的“岩颅”造型（额头突出）而闻名。唱腔丰富多变，表演艺术复杂，分为东西两路，各具特色，艺术底蕴深厚。</p >
+        </div>
+
+        <div class="shadow-item">
+            <h3>滦州影系</h3>
+            <p>源于河北滦州一带，又称唐山影，是中国北方皮影的重要代表。它以驴皮为材，影人尺寸较小，雕工精巧，以“通天鼻梁”和鲜明的五色为显著特征。其唱腔融合了高腔、京剧及地方曲艺，不仅剧目丰富、表演生动，更对评剧的形成产生了重要影响。</p >
+            <img src="photos/滦州影系.jpg" alt="滦州影系" class="tech-img">
+        </div>
+
+        <div class="shadow-item">
+            <img src="photos/京西影系.jpg" alt="京西影系" class="tech-img">
+            <h3>京西影系</h3>
+            <p>流行于北京西郊一带，历史悠久，可追溯至宋金时期。在清代中晚期，它融入了昆曲、京剧元素，形成了唱腔柔和雅致、具有京腔京韵的独特风格。其影人制作讲究，并在传承中注重创新与结合现代审美，适合室内演出，被誉为“京西皮影”。</p >
+        </div>
+    </div>
+</section>
+<section class="user-feedback">
+    <h1 class="section-title">
+        匠人心语
+        <span class="en-title">The Artisan’s Heart-Speak</span>
+    </h1>
+
+    <div class="feedback-grid">
+        <div class="feedback-item">
+            <p class="feedback-content">这张薄薄的驴皮，在我手里刻了四十多年。从选皮、泡皮、刮薄到描样、雕刻、上色，每一步都容不得半点马虎。刻刀划过皮革的沙沙声，就像老伙计在跟我说话，那些历史故事、民间传说，都顺着刀尖藏进了皮影的纹路里...</p >
+            <div class="user-info">
+                <div class="user-meta">
+                    <span class="user-name">晨曦之翼</span>
+                    <span class="user-title">李明华</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-item">
+            <p class="feedback-content">小时候跟着父亲看皮影戏，就被幕布后那活灵活现的影人迷住了。后来接过父亲的操纵杆，一握就是三十年。演出时，我既要控制影人的动作，还要模仿不同角色的唱腔，连锣鼓节奏都得记在心里。看着台下观众跟着剧情欢笑或落泪...</p >
+            <div class="user-info">
+                <div class="user-meta">
+                    <span class="user-name">音乐旅人</span>
+                    <span class="user-title">沈玉娟</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-item">
+            <p class="feedback-content">很多人说皮影只是个玩具，可在我眼里，它们都是有灵魂的。刻关羽要突出他的忠义凛然，刻西施要展现她的温婉秀美，每一个角色的眉眼、服饰、姿态，都得贴合人物性格。有时候为了刻好一个细节，我能坐在工作台前琢磨一整天。看着原本平平无奇的驴皮...</p >
+            <div class="user-info">
+                <div class="user-meta">
+                    <span class="user-name">代码诗人</span>
+                    <span class="user-title">马守义</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-item">
+            <p class="feedback-content">我从十几岁就跟着戏班跑江湖，见证了皮影戏的兴衰。最辉煌的时候，村里搭起戏台，十里八乡的人都来观看，幕布前挤得水泄不通。后来娱乐方式多了，看皮影戏的人越来越少，不少老艺人都改行了。可我舍不得，这是老祖宗传下来的宝贝，不能在我们这代人手里断了。现在...</p >
+            <div class="user-info">
+                <div class="user-meta">
+                    <span class="user-name">小猎人</span>
+                    <span class="user-title">钱秀英</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-item">
+            <p class="feedback-content">作为年轻一代传承人，我不想只守着老传统。我尝试把现代元素融入皮影设计，比如给传统角色加上潮流服饰，用数字化技术制作皮影动画，还会在社交媒体上分享皮影的制作过程。有人说我离经叛道，但我觉得，非遗文化不是博物馆里的展品，只有跟上时代的脚步...</p >
+            <div class="user-info">
+                <div class="user-meta">
+                    <span class="user-name">皮影爱好者</span>
+                    <span class="user-title">Lily</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-item">
+            <p class="feedback-content">弦声起，影人行，这方寸幕布就是我的舞台。四十年来，我跟着戏班走遍了大江南北，把《封神演义》《水浒传》这些经典故事，用皮影戏的方式带给各地观众。演出时，我既是琴师，也是旁白，看着影人们在灯光下演绎着悲欢离合，就像在讲述一个个鲜活的人生...</p >
+            <div class="user-info">
+                <div class="user-meta">
+                    <span class="user-name">生活小确幸</span>
+                    <span class="user-title">许妍</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <img src="底部背景.jpg" alt="底部背景图">
+    <div class="footer-nav">
+        <h3>非遗皮影</h3>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="首页.html">首页</a ></li>
+                <li><a href="历史起源.html">历史起源</a ></li>
+                <li><a href="艺术流派.html">艺术流派</a ></li>
+                <li><a href="制作流程.html">制作流程</a ></li>
+                <li><a href="传承发展.html">传承发展</a ></li>
+                <li><a href="登录.html">登录/注册</a ></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="copyright">
+        版权所有 © 非遗皮影在线网站
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const headerCaption = document.querySelector('.header-caption');
+        if (headerCaption) {
+            headerCaption.style.opacity = '0';
+            headerCaption.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                headerCaption.style.transition = 'all 1s ease';
+                headerCaption.style.opacity = '1';
+                headerCaption.style.transform = 'translateY(0)';
+            }, 300);
+        }
+
+    });
+</script>
+
+</body>
+</html>
